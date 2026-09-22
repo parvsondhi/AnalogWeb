@@ -38,25 +38,6 @@ On by default:
 
 You can turn on colored ink, force one hand for the whole page, include menus and buttons, or let code be handwritten too. The choice is saved on this computer. The extension does not read pages for any other reason, and it does not send them anywhere. The fonts are bundled, so it works offline.
 
-## Preview without installing
-
-From this folder:
-
-```bash
-python3 -m http.server 8747
-```
-
-Open [http://127.0.0.1:8747/preview/](http://127.0.0.1:8747/preview/). The phone on that page uses the same engine as the extension. Press `H` to toggle handwriting.
-
-`/preview/page.html` is the same writing without those controls, so after you load the extension you can watch an ordinary page change.
-
-## Tests
-
-```bash
-npm install
-npm test
-```
-
 ## Fonts
 
 The faces are SIL Open Font License 1.1. See [NOTICE.md](NOTICE.md) and [fonts/OFL.txt](fonts/OFL.txt). The extension code is MIT; the fonts are not.
