@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Handwritten</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body hidden>
+    <header class="mast">
+      <p class="eyebrow">For any page</p>
+      <h1>Handwritten</h1>
+      <p class="lede">The writing turns to ink. Menus, buttons, and code stay put.</p>
+    </header>
+
+    <div class="sheet" id="sheet" data-mode="varied">
+      <p class="line v-script" data-voice="script">The quiet version is usually right.</p>
+      <p class="line v-print" data-voice="print">moved it twice. leaving it there.</p>
+      <p class="line v-marker" data-voice="marker">LESS NOISE. MORE MEANING.</p>
+      <p class="line v-casual" data-voice="casual">I understand it once I write it down.</p>
+    </div>
+
+    <section class="stack">
+      <div class="row">
+        <div>
+          <p class="label">Handwriting</p>
+          <p class="hint" id="status">Off. Pages stay as they are.</p>
+        </div>
+        <button type="button" class="switch" id="enabled" role="switch" aria-checked="false" aria-label="Turn handwriting on">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="voices-block">
+        <p class="label" id="voice-label">Hand</p>
+        <div class="voices" role="radiogroup" aria-labelledby="voice-label">
+          <button type="button" role="radio" data-mode="varied" aria-checked="true">Varied</button>
+          <button type="button" role="radio" data-mode="script" aria-checked="false">Script</button>
+          <button type="button" role="radio" data-mode="print" aria-checked="false">Print</button>
+          <button type="button" role="radio" data-mode="marker" aria-checked="false">Marker</button>
+          <button type="button" role="radio" data-mode="casual" aria-checked="false">Casual</button>
+        </div>
+        <p class="hint" id="voice-hint">Each post gets its own hand.</p>
+      </div>
+
+      <div class="row">
+        <div>
+          <p class="label">Colored ink</p>
+          <p class="hint">Indigo, graphite, marker, and violet.</p>
+        </div>
+        <button type="button" class="switch" id="ink" role="switch" aria-checked="true" aria-label="Colored ink">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div>
+          <p class="label">Keep code monospace</p>
+          <p class="hint">Snippets stay in the type they’re written in.</p>
+        </div>
+        <button type="button" class="switch" id="skipCode" role="switch" aria-checked="true" aria-label="Keep code monospace">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="row">
+        <div>
+          <p class="label">Include menus and buttons</p>
+          <p class="hint">Also restyle navigation and controls.</p>
+        </div>
+        <button type="button" class="switch" id="includeChrome" role="switch" aria-checked="false" aria-label="Include menus and buttons">
+          <span></span>
+        </button>
+      </div>
+
+      <div class="row" id="pause-row" hidden>
+        <div>
+          <p class="label">Pause on <span id="host">this site</span></p>
+          <p class="hint">Other sites keep the current setting.</p>
+        </div>
+        <button type="button" class="switch" id="pause" role="switch" aria-checked="false" aria-label="Pause on this site">
+          <span></span>
+        </button>
+      </div>
+    </section>
+
+    <p class="page-note" id="page-note" hidden></p>
+    <footer>
+      <p id="shortcut">Alt+Shift+H toggles it.</p>
+      <p>Nothing leaves your browser.</p>
+    </footer>
+
+    <script src="../src/engine.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
